@@ -1,18 +1,24 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-// TYPE
+// ==============================================================================
+//                                      TYPES
+// ==============================================================================
 type ThemeState = {
     appTheme: 'light' | 'dark' | 'system';
     appliedTheme: 'dark' | 'light';
 };
 
+// This manages the theme of the app.
+// This is persisted slice and by default it adopts the system theme.
+// ==============================================================================
+//                                      Slice
+// ==============================================================================
 // INITIAL STATE
 const initialState: ThemeState = {
     appTheme: 'system',
     appliedTheme: 'dark',
 };
 
-// SLICE
 const themeSlice = createSlice({
     name: 'theme',
     initialState,

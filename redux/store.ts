@@ -2,6 +2,7 @@ import { configureStore } from '@reduxjs/toolkit';
 import { persistStore, persistReducer } from 'redux-persist';
 import persistConfig from './persistConfig';
 import rootReducer from './rootReducer';
+import { apiSlice } from './services/apiSlice/apiSlice';
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
@@ -11,7 +12,7 @@ export const store = configureStore({
     middleware: (getDefaultMiddleware) =>
         getDefaultMiddleware({
             serializableCheck: false, // required for redux-persist
-        }),
+        }).concat(apiSlice.middleware),
 });
 
 export const persistor = persistStore(store);

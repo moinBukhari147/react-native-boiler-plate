@@ -2,15 +2,19 @@
 const commonColors = {
     brand: '#E50914',
     redIndicator: '#E4777D',
-    yellowIndicator: '#DEC37F',
-    greenIndicator: '#ADE257',
+    yellowIndicator: '#EDBC42',
+    greenIndicator: '#9BCF48',
 };
+// =================================================================
+//                            Types
+// =================================================================
+
 type CommonColorsType = typeof commonColors;
 
 type ColorsType = {
     backgroud: string;
-    text: string;
-    textWithOpacity: (opacity: number) => string; // Function returning a string with opacity
+    foreground: string;
+    foregroundWithOpacity: (opacity: number) => string; // Function returning a string with opacity
     backgroudSec: string;
     theme: 'dark' | 'light';
 };
@@ -24,22 +28,26 @@ type ThemeColorsObj = {
     light: ThemeColors;
 };
 
+// =================================================================
+//                            Colors
+// =================================================================
 // THEME COLORS OBJECT
-export const themeColors: ThemeColorsObj = {
+const THEME_COLORS: ThemeColorsObj = {
     dark: {
         backgroud: '#262626',
-        text: '#FCFCFC',
-        textWithOpacity: (opacity: number) => `rgba(252, 252, 252, ${opacity})`,
+        foreground: '#FCFCFC',
+        foregroundWithOpacity: (opacity: number) => `rgba(252, 252, 252, ${opacity})`,
         backgroudSec: '#404040',
         theme: 'dark',
         ...commonColors,
     },
     light: {
         backgroud: '#FCFCFC',
-        text: '#262626',
-        textWithOpacity: (opacity: number) => `rgba(38, 38, 38, ${opacity})`,
+        foreground: '#262626',
+        foregroundWithOpacity: (opacity: number) => `rgba(38, 38, 38, ${opacity})`,
         backgroudSec: '#E7E7E7',
         theme: 'light',
         ...commonColors,
     },
 };
+export default THEME_COLORS;

@@ -28,19 +28,19 @@ module.exports = defineConfig([
             '@typescript-eslint': tsPlugin,
         },
         rules: {
-            'func-style': ['error', 'expression', { 'allowArrowFunctions': true }],
-            '@typescript-eslint/naming-convention': [
-                'error',
+            "func-style": ["error", "expression", { "allowArrowFunctions": true }],
+            "@typescript-eslint/naming-convention": [
+                "error",
                 {
-                    selector: 'variable',
-                    format: ['camelCase'],
-                    leadingUnderscore: 'allow'
+                    selector: "variable",
+                    format: ["camelCase"],
+                    leadingUnderscore: "allow"
                 },
                 {
-                    selector: 'variable',
+                    selector: "variable",
                     modifiers: ['const'],
-                    format: ['camelCase', 'UPPER_CASE'],
-                    leadingUnderscore: 'allow'
+                    format: ["camelCase", "UPPER_CASE"],
+                    leadingUnderscore: "allow"
                 },
                 {
                     selector: 'variable',
@@ -50,14 +50,14 @@ module.exports = defineConfig([
                 },
 
                 {
-                    selector: 'typeLike',
-                    format: ['PascalCase']
+                    selector: "typeLike",
+                    format: ["PascalCase"]
                 },
                 {
-                    selector: 'variable',
-                    types: ['boolean'],
-                    format: ['camelCase'],
-                    prefix: ['is', 'has', 'can']
+                    selector: "variable",
+                    types: ["boolean"],
+                    format: ["PascalCase"],
+                    prefix: ["is", "has", "can"]
                 }
             ],
             'prettier/prettier': ['error'],
@@ -76,14 +76,14 @@ module.exports = defineConfig([
 
             // Import rules
             'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
-            'import/no-unresolved': 'error',
-            'import/order': [
-                'error',
+            "import/no-unresolved": "error",
+            "import/order": [
+                "error",
                 {
-                    'groups': [['builtin', 'external'], 'internal'],
-                    'alphabetize': {
-                        'order': 'asc',
-                        'caseInsensitive': true
+                    "groups": [["builtin", "external"], "internal"],
+                    "alphabetize": {
+                        "order": "asc",
+                        "caseInsensitive": true
                     }
                 }
             ]
