@@ -157,18 +157,20 @@ yarn expo
 
 ## Folder Structure
 
+```
 src/
 │
 ├── app/             # Contains screen routes
 ├── assets/          # Fonts, images, lottie etc.
-├── components/ # Reusable UI components
-├── constants/ # Theme colors, Used Font, Fonts sizes, Error and global constants
-├── hooks/ # Custom React hooks
-├── redux/ # Redux slices + RTK Query + Store Configuration
-├── redux/features # Redux state slices
-├── redux/api # RTK Query API + Api Slice with Token manager and configuration
-├── styles/ # Screen route styles
-└── utils/ # Centralized validation and helper functions.
+├── components/      # Reusable UI components
+├── constants/       # Theme colors, fonts, font sizes, error messages, and global constants
+├── hooks/           # Custom React hooks
+├── redux/           # Redux slices + RTK Query + Store configuration
+│   ├── features/    # Redux state slices
+│   └── api/         # RTK Query API + API slice with token manager and configuration
+├── styles/          # Screen-specific and shared styles
+└── utils/           # Centralized validation and helper functions
+```
 
 ## 🚀 Features
 
