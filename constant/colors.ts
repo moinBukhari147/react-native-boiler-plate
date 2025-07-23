@@ -1,6 +1,6 @@
 // Clolors for both dark and light themes
 const commonColors = {
-    brand: '#E50914',
+    brand: '#89e509ff',
     redIndicator: '#E4777D',
     yellowIndicator: '#EDBC42',
     greenIndicator: '#9BCF48',

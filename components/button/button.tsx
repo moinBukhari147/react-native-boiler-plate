@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { Text, View, TouchableOpacity, DimensionValue } from 'react-native';
+import { DimensionValue, Text, TouchableOpacity, View } from 'react-native';
 import getStyles, { StylesType } from './style';
 
 // =================================================================
@@ -31,8 +31,8 @@ const Button: React.FC<ButtonPropType> = ({
     pd_h = 0,
     width = '100%',
     height = 44,
-    btnColor = '#E50914',
-    titleColor = '#FCFCFC',
+    btnColor = '#89e509ff',
+    titleColor = '#3d3d3dff',
     title = 'Click Me',
     isDisabled = false,
     disabledColor,

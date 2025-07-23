@@ -29,8 +29,8 @@ const getStyles = (colors: ThemeColors): StylesType => {
             zIndex: 9999,
         },
         lottie: {
-            width: 240,
-            height: 240,
+            width: 440,
+            height: 440,
         },
     });
 };
