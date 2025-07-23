@@ -129,7 +129,6 @@ These settings enable auto-formatting with Prettier, auto-fix ESLint issues, and
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.codeActionsOnSave": {
         "source.fixAll": "explicit",
-        "source.organizeImports": "explicit",
         "source.sortMembers": "explicit"
     }
 }
