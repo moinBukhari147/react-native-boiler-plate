@@ -159,8 +159,8 @@ yarn expo
 
 src/
 │
-├── app/ # Contains screen routes
-├── assets/ # Fonts, images, lottie etc.
+├── app/             # Contains screen routes
+├── assets/          # Fonts, images, lottie etc.
 ├── components/ # Reusable UI components
 ├── constants/ # Theme colors, Used Font, Fonts sizes, Error and global constants
 ├── hooks/ # Custom React hooks
