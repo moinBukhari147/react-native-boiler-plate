@@ -158,7 +158,7 @@ yarn expo
 ## Folder Structure
 
 ```
-src/
+AppName/
 │
 ├── app/             # Contains screen routes
 ├── assets/          # Fonts, images, lottie etc.
