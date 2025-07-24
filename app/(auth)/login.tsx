@@ -48,7 +48,7 @@ const Login = () => {
             refreshToken: '1234',
         };
         dispatch(login(tokens));
-        router.dismissAll();
+        if (router.canDismiss()) router.dismissAll();
         router.replace('/(protected)/(tabs)/home');
     };
 
