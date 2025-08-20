@@ -1,3 +1,70 @@
+## 🧩 Tech Stack
+
+| Tool              | Purpose                                  |
+| ----------------- | ---------------------------------------- |
+| Expo              | React Native framework for building apps |
+| TypeScript        | Static type-checking                     |
+| Redux Toolkit     | Global state management                  |
+| RTK Query         | API data fetching and caching            |
+| Expo Secure Store | Secure Token key/value storage           |
+| Expo Router       | Screen and stack navigation              |
+| ESLint            | Linting and code quality                 |
+| Prettier          | Code formatting                          |
+
+## Folder Structure
+
+```
+AppName/
+│
+├── app/             # Contains screen routes
+├── assets/          # Fonts, images, lottie etc.
+├── components/      # Reusable UI components
+├── constants/       # Theme colors, fonts, font sizes, error messages, and global constants
+├── hooks/           # Custom React hooks
+├── redux/           # Redux slices + RTK Query + Store configuration
+│   ├── features/    # Redux state slices
+│   └── api/         # RTK Query API + API slice with token manager and configuration
+├── styles/          # Screen-specific and shared styles
+└── utils/           # Centralized validation and helper functions
+```
+
+## 🚀 Features
+
+### ✅ Pre-configured Essentials
+
+- **Global Loader With State** — Use a loading spinner globally across screens using Redux state.
+- **Dark & Light Theme With Persistence** — Dark and Light theme preconfigured Automatically persists user-selected theme across app restarts.
+- **Auth Guard With Authentication Flow** — Includes the auth guard protected routes with basic authentication flow setup.
+- **Token Management with Auto Re-auth**
+    - Reauth when token expires with Refresh token logic for **RTK Query**.
+    - Handles **race conditions** when multiple API calls happen simultaneously during token expiry.
+
+### 🧠 State Management
+
+- Uses **Redux Toolkit** for scalable and modular state management.
+- Stores tokens securely using **Expo Secure Store** and injects them into Redux at app initialization.
+
+### 🛠️ API Integration
+
+- Fully set up **RTK Query** for declarative API handling.
+- Token refresh interceptor and headers are injected automatically.
+- Publi routes config file that exclude the auth bearer header.
+- `useApiErrorHandler` custom hook for standardized API error management.
+
+### 🎨 Theme and Fonts
+
+- Custom hook to manage fonts — Just drop your font file and register it in `useAppFont.ts`.
+- Easily switch between light and dark themes.
+- Configure the colors in constant/colors file.
+
+### ✔️ Validation System
+
+- Centralized, reusable form field validations in `utils/validation`.
+
+### 🧹 Code Quality Tools
+
+- ESLint configured with standard rules.
+
 # Project Setup Guide
 
 This is a comprehensive guide to setting up and running the project locally using Expo. Follow the instructions below to get started.
@@ -141,73 +208,6 @@ Run the app:
 ```bash
 yarn expo
 ```
-
-## 🧩 Tech Stack
-
-| Tool              | Purpose                                  |
-| ----------------- | ---------------------------------------- |
-| Expo              | React Native framework for building apps |
-| TypeScript        | Static type-checking                     |
-| Redux Toolkit     | Global state management                  |
-| RTK Query         | API data fetching and caching            |
-| Expo Secure Store | Secure Token key/value storage           |
-| Expo Router       | Screen and stack navigation              |
-| ESLint            | Linting and code quality                 |
-| Prettier          | Code formatting                          |
-
-## Folder Structure
-
-```
-AppName/
-│
-├── app/             # Contains screen routes
-├── assets/          # Fonts, images, lottie etc.
-├── components/      # Reusable UI components
-├── constants/       # Theme colors, fonts, font sizes, error messages, and global constants
-├── hooks/           # Custom React hooks
-├── redux/           # Redux slices + RTK Query + Store configuration
-│   ├── features/    # Redux state slices
-│   └── api/         # RTK Query API + API slice with token manager and configuration
-├── styles/          # Screen-specific and shared styles
-└── utils/           # Centralized validation and helper functions
-```
-
-## 🚀 Features
-
-### ✅ Pre-configured Essentials
-
-- **Global Loader With State** — Use a loading spinner globally across screens using Redux state.
-- **Dark & Light Theme With Persistence** — Dark and Light theme preconfigured Automatically persists user-selected theme across app restarts.
-- **Auth Guard With Authentication Flow** — Includes the auth guard protected routes with basic authentication flow setup.
-- **Token Management with Auto Re-auth**
-    - Reauth when token expires with Refresh token logic for **RTK Query**.
-    - Handles **race conditions** when multiple API calls happen simultaneously during token expiry.
-
-### 🧠 State Management
-
-- Uses **Redux Toolkit** for scalable and modular state management.
-- Stores tokens securely using **Expo Secure Store** and injects them into Redux at app initialization.
-
-### 🛠️ API Integration
-
-- Fully set up **RTK Query** for declarative API handling.
-- Token refresh interceptor and headers are injected automatically.
-- Publi routes config file that exclude the auth bearer header.
-- `useApiErrorHandler` custom hook for standardized API error management.
-
-### 🎨 Theme and Fonts
-
-- Custom hook to manage fonts — Just drop your font file and register it in `useAppFont.ts`.
-- Easily switch between light and dark themes.
-- Configure the colors in constant/colors file.
-
-### ✔️ Validation System
-
-- Centralized, reusable form field validations in `utils/validation`.
-
-### 🧹 Code Quality Tools
-
-- ESLint configured with standard rules.
 - Prettier for consistent formatting.
 - `.vscode/` settings included for smooth integration with recommended extensions.
 
