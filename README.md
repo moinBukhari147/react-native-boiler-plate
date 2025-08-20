@@ -1,3 +1,6 @@
+# ReactNative Boilerplate
+
+A ready-to-use boilerplate with Typescript for rapid development, featuring built-in global state management, colors, and dark light theme configurations with persistence, RTK query with reauth and token management.
 ## 🧩 Tech Stack
 
 | Tool              | Purpose                                  |
